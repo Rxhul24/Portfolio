@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>Rahul Thakur — Fullstack Developer</title>
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Inline critical CSS to avoid flash -->
+  <style>body{opacity:0;transition:opacity .2s ease}body.loaded{opacity:1}</style>
+
+  <!-- Optional libraries -->
+  <script defer src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.11.0/dist/gsap.min.js"></script>
+</head>
+<body>
+  <!-- Particle background -->
+  <div id="particles-js" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <div class="logo">RT</div>
+      <ul class="menu" role="menubar">
+        <li role="none"><a role="menuitem" href="#home">Home</a></li>
+        <li role="none"><a role="menuitem" href="#about">About</a></li>
+        <li role="none"><a role="menuitem" href="#skills">Skills</a></li>
+        <li role="none"><a role="menuitem" href="#projects">Projects</a></li>
+        <li role="none"><a role="menuitem" href="#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Robot guide container -->
+  <div id="robot-guide-container" aria-hidden="true"></div>
+
+  <!-- Main -->
+  <main id="main-content">
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <h1 class="hero-title">Rahul Thakur</h1>
+          <p class="hero-role">Fullstack Developer</p>
+          <p class="hero-desc">I build practical web applications and APIs. I focus on delivering working features and readable code — comfortable across frontend and backend at an average-to-good level.</p>
+          <div class="cta">
+            <a class="btn primary" href="#projects">View Projects</a>
+            <a class="btn secondary" href="#contact">Contact Me</a>
+          </div>
+          <div class="links-row">
+            <a href="https://github.com/Rxhul24" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Github</a>
+            <a href="http://linkedin.com/in/rahul-thakur-988120261" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          </div>
+        </div>
+
+        <div class="hero-right" aria-hidden="true">
+          <div class="code-animation" aria-hidden="true">
+            <div class="code-header">
+              <div class="dots"><span></span><span></span><span></span></div>
+              <div class="code-title">server.js</div>
+            </div>
+            <pre><code>const express = require('express');
+const app = express();
+const PORT = process.env.PORT || 5000;
+
+app.use(express.json());
+
+app.get('/api', (req, res) => {
+  res.json({ message: 'Hello from Rahul', status: 'OK' });
+});
+
+app.listen(PORT, () => console.log(`Server running on ${PORT}`));</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p><strong>Rahul Thakur</strong> — B.Tech (CSE-AIML), Lakshmi Narain College of Technology & Science. I enjoy building simple, maintainable web applications and learning ML tools. I solve problems by breaking them down and shipping reliable code.</p>
+            <ul class="about-list">
+              <li><strong>Phone:</strong> <a href="tel:7354627793">7354627793</a></li>
+              <li><strong>Email:</strong> <a href="mailto:rahulthakurk024@gmail.com">rahulthakurk024@gmail.com</a></li>
+              <li><strong>Location:</strong> Bhopal, Madhya Pradesh</li>
+            </ul>
+          </div>
+
+          <div class="terminal" aria-hidden="true">
+            <div class="terminal-header">
+              <div class="term-dots"><span></span><span></span><span></span></div>
+              <div class="term-title">rahul@dev:~</div>
+            </div>
+            <div class="terminal-body">
+              <p><span class="prompt">$</span> whoami</p>
+              <p class="output">Rahul Thakur — Fullstack Developer</p>
+              <p><span class="prompt">$</span> cat skills.txt</p>
+              <p class="output">Java, JavaScript, Node.js, React, MongoDB, TensorFlow (practical), Tailwind CSS</p>
+              <p><span class="prompt typing"></span><span class="cursor">|</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="skills">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h4>Backend</h4>
+            <p>Node.js · Express · REST APIs</p>
+            <div class="skill-bar"><div class="skill-progress" data-progress="75"></div></div>
+          </div>
+          <div class="skill-card">
+            <h4>Frontend</h4>
+            <p>React.js · HTML · CSS</p>
+            <div class="skill-bar"><div class="skill-progress" data-progress="72"></div></div>
+          </div>
+          <div class="skill-card">
+            <h4>Databases</h4>
+            <p>MongoDB · Basic SQL</p>
+            <div class="skill-bar"><div class="skill-progress" data-progress="70"></div></div>
+          </div>
+          <div class="skill-card">
+            <h4>AI/ML (Intro)</h4>
+            <p>TensorFlow · Keras · OpenCV</p>
+            <div class="skill-bar"><div class="skill-progress" data-progress="65"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+          <article class="project">
+            <h3>SkillBridge</h3>
+            <p><em>Role:</em> Full Stack Developer</p>
+            <p class="project-desc">AI-powered micro-internship platform connecting students with startups. Key features: AI-driven matching, dashboards, authentication, real-time notifications.</p>
+            <p class="project-tech"><strong>Tech:</strong> Node.js, Express, MongoDB, React, Tailwind CSS, OpenAI API</p>
+            <a class="project-link" href="#" aria-hidden="true">View →</a>
+          </article>
+
+          <article class="project">
+            <h3>AgroShield</h3>
+            <p><em>Role:</em> AI/ML Engineer</p>
+            <p class="project-desc">Crop disease predictor using deep learning (CNN). Streamlit interface for image upload & instant predictions.</p>
+            <p class="project-tech"><strong>Tech:</strong> TensorFlow, Keras, OpenCV, Streamlit</p>
+            <a class="project-link" href="#" aria-hidden="true">View →</a>
+          </article>
+
+          <article class="project">
+            <h3>Blog API (learning)</h3>
+            <p>Simple REST API with authentication and CRUD for posts & comments; used for learning deployment and auth flows.</p>
+            <p class="project-tech"><strong>Tech:</strong> Node.js, Express, JWT, MongoDB</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h4>Phone</h4>
+            <p><a href="tel:7354627793">7354627793</a></p>
+          </div>
+          <div class="contact-card">
+            <h4>Email</h4>
+            <p><a href="mailto:rahulthakurk024@gmail.com">rahulthakurk024@gmail.com</a></p>
+          </div>
+          <div class="contact-card">
+            <h4>Location</h4>
+            <p>Bhopal, Madhya Pradesh</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Rahul Thakur — Built by Rahul</p>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Scripts -->
+  <script defer src="js/smooth-scroll.js"></script>
+  <script defer src="js/main.js"></script>
+  <script defer src="js/robot-guide.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('year').textContent = new Date().getFullYear();
+      requestAnimationFrame(() => document.body.classList.add('loaded'));
+    });
+  </script>
+</body>
+</html>
